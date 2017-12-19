@@ -4,15 +4,19 @@ url <- 'https://news.ycombinator.com/'
 
 content <- read_html(url)
 
-#Extracting the News Title
+#News Title
 
 content %>% html_nodes('a.storylink') %>% html_text()
 
-#Extracting the News Link Domain
+#News Link Domain
 
 content %>% html_nodes('span.sitestr') %>% html_text()
 
+#Link Score / Upvote
+
 content %>% html_nodes('span.score') %>% html_text()
+
+#Link Age (submission time)
 
 content %>% html_nodes('span.age') %>% html_text()
 
