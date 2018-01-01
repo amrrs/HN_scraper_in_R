@@ -2,6 +2,9 @@ library(rvest)
 
 url <- 'https://news.ycombinator.com/'
 
+#further pages 
+#url2 <- 'https://news.ycombinator.com/news?p=2'
+
 content <- read_html(url)
 
 #News Title
